@@ -36,6 +36,9 @@ export default class ToDoList extends Component {
     return (
       <div>
         <ToDoForm onSubmit={this.addToDo} />
+        <br/>
+        <h6><u>Click each task when complete to cross it off!</u></h6>
+        <br/>
         {this.state.tasks.map((task, index) => (
             <Task
             key={index}
