@@ -22,10 +22,12 @@ class SearchIndex extends Component {
         {this.state.things.filter(item => {
           if(item.includes(this.state.searchTerm)) {
             return true;
+          } else {
+            return false;
           }
         })
-        .map(item => (
-          <div>
+        .map((item, index) => (
+          <div key={index}>
             <p>{item}</p>
           </div>
         ))
